@@ -39,7 +39,7 @@ const EXPERIENCE: TimelineItem[] = [
       '- Developed end-to-end solutions for an e-learning platform using Go, Vue, Python, and MongoDB.',
       '- Led a team of 6 engineers to launch a revamped learning workflow in 3 months, improving accessibility for 400,000+ students and driving a 23% revenue uplift.',
       '- Directed migration to remote learning during  COVID-19, enabling uninterrupted access for 150,000+ students.',
-      '- Designed a comprehensive drill-down dashboard, enabling real-time access to platform-wide metadata, reducing developer support requests by 78% and accelerating issue resolution',
+      '- Designed a comprehensive drill-down dashboard, enabling real-time access to platform-wide metadata, reducing developer support requests by 78% and accelerating issue resolution.',
       '- Redesigned monolithic architecture to microservices and distributed designs, improving deployment efficiency and platform scalability.',
     ],
   },
@@ -137,6 +137,8 @@ export default function ExperiencePage() {
 }
 
 function Timeline({ items }: { items: TimelineItem[] }) {
+
+
   return (
     <div className="relative max-w-5xl mx-auto">
       {/* Darker, offset line */}
@@ -172,11 +174,13 @@ function Timeline({ items }: { items: TimelineItem[] }) {
               >
                 <div className="px-6 py-5">
                   <p className="text-sm font-semibold">{item.org}</p>
-                  <ul className="mt-2 space-y-1">
-                    {item.bullets.map((b, i) => (
-                      <li key={i} className="text-sm leading-relaxed">{b}</li>
-                    ))}
-                  </ul>
+                  {(item.bullets ?? []).length > 0 && (
+                    <ul className="mt-2 space-y-1">
+                      {(item.bullets ?? []).map((b, i) => (
+                        <li key={i} className="text-sm leading-relaxed">{b}</li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
                 <div className="h-[3px] rounded-b-lg" style={{ backgroundColor: tint.dot }} />
               </div>
