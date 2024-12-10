@@ -41,7 +41,7 @@ export async function POST(req: Request) {
     await resend.emails.send({
       from: 'Purva Zinjarde <onboarding@resend.dev>',
       to: [TO],
-      reply_to: email,
+      replyTo: email,
       subject: `${sanitize(subject)} — ${sanitize(first)} ${sanitize(last)}`,
       text: `From: ${sanitize(first)} ${sanitize(last)} <${email}>\n\n${message}`,
     });
