@@ -160,22 +160,22 @@ export default function Home() {
 
         {/* Footer - Social Icons */}
         <div className="max-w-lg mx-auto bg-[#5A8770] py-5 px-8 flex justify-center space-x-8 mt-[8px]">
-          <a href={`${process.env.NEXT_LINKEDIN}`} className="text-white hover:opacity-80">
+          <a href="https://www.linkedin.com/in/purva-zinjarde/" className="text-white hover:opacity-80">
             <LinkedInIcon fontSize="medium" />
           </a>
-          <a href={`${process.env.NEXT_GITHUB}`} className="text-white hover:opacity-80">
+          <a href="https://github.com/purvaz" className="text-white hover:opacity-80">
             <GitHubIcon fontSize="medium" />
           </a>
           <a href={`mailto:${process.env.NEXT_CONTACT_EMAIL}`} className="text-white hover:opacity-80">
             <EmailIcon fontSize="medium" />
           </a>
-          <a href={`${process.env.NEXT_GOOGLE_SCHOLAR}`} className="text-white hover:opacity-80">
+          <a href="https://scholar.google.com/citations?user=DXTKAG0AAAAJ&amp;hl=en" className="text-white hover:opacity-80">
             <SchoolIcon fontSize="medium" />
           </a>
-          <a href={`${process.env.NEXT_PIXELS_BY_PURVA}`} className="text-white hover:opacity-80">
+          <a href="https://pixels-by-purva.vercel.app/" className="text-white hover:opacity-80">
             <CameraEnhanceIcon fontSize="medium" />
           </a>
-          <a href={`${process.env.NEXT_INSTAGRAM}`} className="text-white hover:opacity-80">
+          <a href="https://www.instagram.com/pixels_by_purva/" className="text-white hover:opacity-80">
             <InstagramIcon fontSize="medium" />
           </a>
         </div>
@@ -257,31 +257,31 @@ export default function Home() {
               <div className="mt-10 pt-6">
                 <div className="flex items-center gap-6">
                   <a
-                    href={`${process.env.NEXT_LINKEDIN}`}
+                    href="https://www.linkedin.com/in/purva-zinjarde/"
                     aria-label="LinkedIn"
                     className="text-white hover:opacity-80"
                   >
                     <LinkedInIcon fontSize="medium" />
                   </a>
                   <a
-                    href={`${process.env.NEXT_GITHUB}`}
+                    href="https://github.com/purvaz"
                     aria-label="GitHub"
                     className="text-white hover:opacity-80"
                   >
                     <GitHubIcon fontSize="medium" />
                   </a>
                   <a
-                    href={`${process.env.NEXT_INSTAGRAM}`}
+                    href="https://www.instagram.com/pixels_by_purva/"
                     aria-label="Instagram"
                     className="text-white hover:opacity-80"
                   >
                     <InstagramIcon fontSize="medium" />
                   </a>
-                  <a href={`${process.env.NEXT_GOOGLE_SCHOLAR}`} className="text-white hover:opacity-80">
+                  <a href="https://scholar.google.com/citations?user=DXTKAG0AAAAJ&amp;hl=en" className="text-white hover:opacity-80">
                     <SchoolIcon fontSize="medium" />
                   </a>
                   <a
-                    href={`${process.env.NEXT_PIXELS_BY_PURVA}`}
+                    href="https://pixels-by-purva.vercel.app/"
                     aria-label="Photography site"
                     className="text-white hover:opacity-80"
                   >

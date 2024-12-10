@@ -2,8 +2,8 @@ import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 import { z } from 'zod';
 
-export const runtime = 'nodejs';           // ensures Node runtime (not edge)
-export const dynamic = 'force-dynamic';    // no caching of POST
+export const runtime = 'nodejs';
+export const dynamic = 'force-dynamic';
 
 const resend = new Resend(process.env.NEXT_RESEND_API_KEY);
 const TO = process.env.NEXT_CONTACT_EMAIL!;
@@ -18,13 +18,10 @@ const schema = z.object({
 });
 
 function sanitize(s: string) {
-  // avoid header injection via newlines
   return s.replace(/[\r\n]/g, ' ').trim();
 }
 
 export async function POST(req: Request) {
-  // Basic rate-limit seed (upgrade to Redis for production)
-  // const ip = req.headers.get('x-forwarded-for') ?? 'unknown';
 
   let body: unknown;
   try {
@@ -42,18 +39,15 @@ export async function POST(req: Request) {
 
   try {
     await resend.emails.send({
-      // Use onboarding@resend.dev for dev; switch to your verified domain later
       from: 'Purva Zinjarde <onboarding@resend.dev>',
       to: [TO],
-      reply_to: email, // lets you reply to the sender directly
+      reply_to: email,
       subject: `${sanitize(subject)} — ${sanitize(first)} ${sanitize(last)}`,
       text: `From: ${sanitize(first)} ${sanitize(last)} <${email}>\n\n${message}`,
-      // You can also send HTML here if you prefer
     });
 
     return NextResponse.json({ ok: true });
   } catch (err) {
-    // Don’t leak provider errors to client
     return NextResponse.json({ error: 'Send failed' }, { status: 500 });
   }
 }
