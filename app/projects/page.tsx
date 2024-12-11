@@ -1,4 +1,4 @@
-import Navbar from '@/components/Navbar';
+import Navbar from '@/components/NavBar';
 import ViewInArIcon from '@mui/icons-material/ViewInAr';
 import TerminalIcon from '@mui/icons-material/Terminal';
 import TopicIcon from '@mui/icons-material/Topic';
