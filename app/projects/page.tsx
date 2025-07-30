@@ -7,6 +7,7 @@ import PhotoCameraIcon from '@mui/icons-material/PhotoCamera';
 import MedicalInformationIcon from '@mui/icons-material/MedicalInformation';
 import MonitorHeartIcon from '@mui/icons-material/MonitorHeart';
 import MoodIcon from '@mui/icons-material/Mood';
+import Footer from '@/components/Footer';
 
 export default function ProjectsPage() {
     const projects = [
@@ -123,6 +124,7 @@ export default function ProjectsPage() {
                     ))}
                 </div>
             </section>
+            <Footer />
         </div>
     );
 }
