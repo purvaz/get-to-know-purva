@@ -6,6 +6,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import SchoolIcon from '@mui/icons-material/School';
 import PhotoCameraIcon from '@mui/icons-material/PhotoCamera';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
@@ -68,7 +69,7 @@ export default function Home() {
 
       {/* Education & Experience Section */}
       <section className="py-20 text-center px-6">
-        <h2 className="text-2xl lg:text-3xl font-light mb-6">Education & Experience</h2>
+        <h2 className="text-2xl lg:text-3xl font-light mb-6">Education &amp; Experience</h2>
         <div className="w-18 h-1 bg-[#fab910] my-4 mx-auto rounded-full" />
         <p className="max-w-2xl mx-auto text-gray-700 text-lg leading-relaxed">
           I hold dual Master's degrees in Computer Science and have 6+ years of experience working in EdTech, FinTech, and Research.
@@ -77,6 +78,71 @@ export default function Home() {
         </p>
       </section>
 
+      <section className="bg-[#5A8770] text-white py-16 px-6">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-2xl lg:text-3xl font-light mb-10">
+             Technologies &amp; Skills
+          </h2>
+
+          <div className="grid gap-10 md:grid-cols-5">
+            {/* Category: Languages */}
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Languages</h3>
+              <div className="w-10 h-0.5 bg-[#fab910] my-4 mx-auto rounded-full" />
+              <div className="grid gap-3 text-sm">
+                {['Go', 'TypeScript', 'Python', 'JavaScript', 'Java', 'C/C++', 'C#', 'PHP'].map((skill, i) => (
+                  <div key={i} className="hover:text-[#fab910] transition cursor-default">{skill}</div>
+                ))}
+              </div>
+            </div>
+
+            {/* Category: Frameworks */}
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Frameworks</h3>
+              <div className="w-10 h-0.5 bg-[#fab910] my-4 mx-auto rounded-full" />
+              <div className="grid gap-3 text-sm">
+                {['Node.js', 'Flask', 'Spring', 'React.js', 'Next.js', 'Vue.js', 'TailwindCSS'].map((skill, i) => (
+                  <div key={i} className="hover:text-[#fab910] transition cursor-default">{skill}</div>
+                ))}
+              </div>
+            </div>
+
+            {/* Category: Frameworks */}
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Libraries &amp; ML Tools</h3>
+              <div className="w-10 h-0.5 bg-[#fab910] my-4 mx-auto rounded-full" />
+              <div className="grid gap-3 text-sm">
+                {['TensorFlow', 'PyTorch', 'Scikit-learn', 'Keras', 'NumPy', 'Pandas', 'NLTK', 'SciPy', 'Matplotlib'].map((skill, i) => (
+                  <div key={i} className="hover:text-[#fab910] transition cursor-default">{skill}</div>
+                ))}
+              </div>
+            </div>
+
+            {/* Category: Cloud & DevOps */}
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Cloud &amp; Databases</h3>
+              <div className="w-10 h-0.5 bg-[#fab910] my-4 mx-auto rounded-full" />
+              <div className="grid gap-3 text-sm">
+                {['AWS', 'GCP', 'Docker', 'Kubernetes', 'Redis', 'MongoDB', 'MySQL', 'Oracle', 'PostgreSQL'].map((skill, i) => (
+                  <div key={i} className="hover:text-[#fab910] transition cursor-default">{skill}</div>
+                ))}
+              </div>
+            </div>
+
+            {/* Category: Tools & Databases */}
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Tools &amp; Platforms</h3>
+              <div className="w-10 h-0.5 bg-[#fab910] my-4 mx-auto rounded-full" />
+              <div className="grid gap-3 text-sm">
+                {['Postman', 'Jupyter', 'IntelliJ', 'VS Code', 'Unity', 'Figma', 'Tableau', 'JIRA'].map((skill, i) => (
+                  <div key={i} className="hover:text-[#fab910] transition cursor-default">{skill}</div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <Footer />
     </div>
   );
 }
