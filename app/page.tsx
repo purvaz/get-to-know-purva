@@ -21,7 +21,7 @@ export default function Home() {
           {/* Left - Image */}
           <div className="w-full lg:w-1/2 flex justify-center items-center bg-white py-6">
             <Image
-              src="/purva.png"
+              src="/purvaz.png"
               alt="Purva Zinjarde"
               width={800}
               height={1000}
