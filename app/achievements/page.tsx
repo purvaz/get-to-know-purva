@@ -1,5 +1,6 @@
 'use client';
 
+import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 
 const achievements = {
@@ -23,14 +24,14 @@ const achievements = {
 const bgVariants = [
   'from-[#527A67] to-[#344E41]', // dark green (white text ok)
   'from-[#F7C948] to-[#FDE19B]', // golden yellow (needs dark text)
-  'from-[#4E9E91] to-[#2F7D72]', // richer teal (white text ok)
+  'from-[#c9d2c5] to-[#C4DCBC]', // richer teal (white text ok)
 ];
 
 // Per-section typography + card styling to guarantee contrast
 const sectionStyles = [
   { sectionText: 'text-white', headingBorder: 'border-white/40', card: 'bg-white/20 border-white/20', cardTitle: 'text-white', cardBody: 'text-white/90', cardMeta: 'text-white/80' },
   { sectionText: 'text-gray-700', headingBorder: 'border-black/20', card: 'bg-white/30 border-black/10', cardTitle: 'text-gray-700', cardBody: 'text-gray-700', cardMeta: 'text-gray-700' },
-  { sectionText: 'text-white', headingBorder: 'border-white/40', card: 'bg-white/20 border-white/20', cardTitle: 'text-white', cardBody: 'text-white/90', cardMeta: 'text-white/80' },
+  { sectionText: 'text-gray-700', headingBorder: 'border-black/40', card: 'bg-white/30 border-black/20', cardTitle: 'text-gray-700', cardBody: 'text-gray-700', cardMeta: 'text-gray-700' },
 ];
 
 export default function AchievementsPage() {
@@ -43,7 +44,7 @@ export default function AchievementsPage() {
         <h2 className="text-3xl lg:text-4xl font-semibold text-center text-gray-900 mb-2">
           Key Achievements
         </h2>
-        <p className="text-center text-gray-600 text-sm mb-12">Professional Milestones</p>
+        <p className="text-center text-gray-600 text-sm mb-12">Professional Milestones of the work, recognition, and impact I’m proud of.</p>
 
         {categories.map(([category, awards], idx) => {
           const style = sectionStyles[idx % sectionStyles.length];
@@ -78,6 +79,7 @@ export default function AchievementsPage() {
           );
         })}
       </div>
+      <Footer />
     </div>
   );
 }
