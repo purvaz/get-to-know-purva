@@ -40,7 +40,7 @@ export default function AchievementsPage() {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <div className="pt-24">
+      <div className="pt-24 bg-[#f2f8f2]">
         <h2 className="text-3xl lg:text-4xl font-semibold text-center text-gray-900 mb-2">
           Key Achievements
         </h2>

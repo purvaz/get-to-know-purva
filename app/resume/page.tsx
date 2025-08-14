@@ -92,7 +92,7 @@ const RIGHT_TINTS = [
 
 export default function ExperiencePage() {
   return (
-    <div className="min-h-screen bg-[#DDEBD8] text-[#1c2340]">
+    <div className="min-h-screen bg-[#F2F8F2] text-[#1c2340]">
       <Navbar />
 
       {/* Header */}
@@ -123,12 +123,12 @@ export default function ExperiencePage() {
       <div className="h-px w-full bg-gray-200" />
 
       {/* Education */}
-      <header className="px-6 lg:px-10 pt-16 border-t border-white pb-16 bg-gradient-to-r from-[#F5F6F4] via-[#EBEDE9] to-[#f2f0e5]">
+      <header className="px-6 lg:px-10 pt-16 border-t border-white pb-16 bg-[#DDEBD8]">
         <h1 className="text-3xl lg:text-4xl font-semibold tracking-tight">Education</h1>
         <p className="text-sm text-gray-600 mt-2">The education that built my foundation as an engineer.</p>
       </header>
 
-      <section className="px-6 lg:px-10 pb-16 bg-gradient-to-r from-[#F5F6F4] via-[#EBEDE9] to-[#f2f0e5]">
+      <section className="px-6 lg:px-10 pb-16 bg-[#DDEBD8]">
         <Timeline items={EDUCATION} />
       </section>
       <Footer />

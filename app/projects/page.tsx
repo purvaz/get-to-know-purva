@@ -77,7 +77,7 @@ export default function ProjectsPage() {
     ];
 
     return (
-        <div className="bg-[#CAD2C5] min-h-screen">
+        <div className="bg-[#eaf3ea] min-h-screen">
             <Navbar />
 
             <section className="py-20 px-6 text-center">
